@@ -9,13 +9,12 @@ const DayDeatilsScreen = () => {
       <Stack.Screen options={{ title: 'Day 1' }} />
 
       <Text style={{ fontFamily: 'AmaticBold', fontSize: 100 }}>
-        Day Details Screen
+        Day Details Screen pv
       </Text>
     </View>
     );
 };
 
-// define your styles
 
 
 //make this component available to the app

@@ -1,25 +1,28 @@
-//import liraries
-import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Pressable, Button ,StyleSheet} from 'react-native';
+import React from 'react';
+import { Link, Stack } from 'expo-router';
 
-// create a component
-const DayDeatilsScreen = () => {
-    return (
-        <View style={styles.container}>
-            <Text>DayDeatilsScreen 555</Text>
-        </View>
-    );
+const DayDetailsScreen = () => {
+  return (
+    <View style={styles.container}>
+      <Stack.Screen options={{ title: 'Day 2: Onboarding' }} />
+      <Text>Day Details Screen</Text>
+
+      <Link href="/day2/onboarding" asChild>
+        <Pressable>
+          <Text style={{ color: 'blue', fontSize: 16, padding: 10 }}>Go to onboarding</Text>
+        </Pressable>
+      </Link>
+    </View>
+  );
 };
 
-// define your styles
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#2c3e50',
-    },
+  container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+     
+  },
 });
-
-//make this component available to the app
-export default DayDeatilsScreen;
+export default DayDetailsScreen;
